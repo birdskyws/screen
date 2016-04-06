@@ -1,0 +1,109 @@
+/*======== 微信图片右边样式 ========*/
+.weixin-right {
+	width: 698px;
+	height: 1343px;
+	float: right;
+	background: #fff;
+	border: 1px solid #35bc7a;
+	position: relative;
+}
+.weixin-box {
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	overflow: hidden;
+}
+/*======== 微信右边内容图样式 ========*/
+.opt-img {
+	margin-left: 5px;
+	width: 695px;
+	position: absolute;
+	z-index: 1;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+/*======== 微博右边样式 ========*/
+.weibo-right {
+	width: 698px;
+	height: 100%;
+	float: right;
+	position: absolute;
+	border: 1px solid #256899;
+	z-index: 1;
+	top: 0px;
+	bottom: 0px;
+	left: 382px;
+	overflow: hidden;
+}
+.weibo-box {
+	width: 100%;
+}
+.weibo-opt {
+	position: absolute;
+	z-index: 1;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+/*======== 军报每天读视频列表样式 ========*/
+.box-video {
+	width: 206px;
+	position: absolute;
+	z-index: 1;
+	top: 0px;
+	bottom: 0px;
+	left: 8px;
+	overflow: hidden;	
+}
+.box-video-opt {
+	position: absolute;
+	z-index: 1;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;	
+}

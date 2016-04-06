@@ -1,0 +1,488 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>解放军报阅读大屏</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/animation.css">
+	<link rel="stylesheet" type="text/css" href="css/scroll.css">
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/jquery.nicescroll.js"></script>
+	<script src="js/iscroll.js"></script>
+</head>
+<body onselectstart="return false" ondragstart="return false" onbeforecopy="return false" oncopy=document.selection.empty() onselect=document.selection.empty()>
+	<div class="main">
+		<audio id="jfjb-audio" src="media/10.mp3" preload="load"></audio>
+		<!-- 头部导航部分 开始-->
+		<div class="header header-alter clear" id="jfjb-header">
+			<ul class="clear" id="jfjb-tab">
+				<li class="logo box-show" id="index">
+					<i href="index.html"></i>
+				</li>
+				<li id="weixin">
+					<dl>
+						<dt>
+							<img src="images/weixin.png">
+						</dt>
+						<dd>
+							<h3>军报微信</h3>
+						</dd>
+					</dl>
+				</li>
+				<li id="weibo">
+					<dl>
+						<dt>
+							<img src="images/weibo.png">
+						</dt>
+						<dd>
+							<h3>军报微博</h3>
+						</dd>
+					</dl>
+				</li>
+				<li id="video">
+					<dl>
+						<dt>
+							<img src="images/video.png">
+						</dt>
+						<dd>
+							<h3>军报每天读</h3>
+						</dd>
+					</dl>
+				</li>
+				<li id="newspaper">
+					<dl>
+						<dt>
+							<img src="images/paper.png">
+						</dt>
+						<dd>
+							<h3>解放军报</h3>
+						</dd>
+					</dl>
+				</li>
+			</ul>
+		</div>
+		<!-- 头部导航部分 结束-->
+
+		<!-- 军报大屏内容 首页开始-->
+		<div class="jfjb-box" id="jfjb-index">
+			<!-- 军报每天读 -->
+			<div class="video-box clear">
+				<div class="videos" id="video-show1">
+		          	<!-- 首页视屏加载 -->
+				</div>
+				<div class="summary">
+					<!-- 加载军报每天读主持人滚动 -->
+				</div>
+			</div>
+			<!-- 丝带 -->
+			<div class="ribbon"></div>
+			<!-- 军报微信，微博，军报 -->
+			<div class="complex clear">
+				<dl class="jfjb-complex">
+					<dt>
+						<div class="weixin-color" id="weixin"></div>
+						<div class="jfjb-round" id="weixin">
+							<span class="weixin-img"></span>
+						</div>
+					</dt>
+					<dd class="jfjb-weixin-show" id="weixin">
+						<!-- 首页最新微信加载 -->
+					</dd>
+				</dl>
+				<dl class="jfjb-complex" id="newspaper">
+					<dt>
+						<div class="paper-color"></div>
+						<div class="jfjb-round" id="newspaper">
+							<span href="#" class="paper-img"></span>
+						</div>
+					</dt>
+					<dd class="jfjb-newspaper-show" id="newspaper">
+						<!-- 首页最新报纸加载 -->
+					</dd>
+				</dl>
+				<dl class="jfjb-complex right-clear" id="weibo">
+					<dt>
+						<div class="weibo-color"></div>
+						<div class="jfjb-round" id="weibo">
+							<span href="#" class="weibo-img"></span>
+						</div>
+					</dt>
+					<dd class="jfjb-weibo-show" id="weibo">
+						<!-- 首页最新微博加载 -->
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<!-- 军报大屏 首页结束 -->
+		
+		<!-- 军报大屏 军报每天读开始 -->
+		<div class="jfjb-box" id="jfjb-video">
+			<!-- 军报每天读-视频 -->
+			<div class="video-show clear">
+				<div class="video-begin">
+					<!-- <h3>《军报每天读》20150423</h3> -->
+					<div class="videos-small" id="video-display">
+			          	<!-- 军报天天读当日视频 -->
+					</div>
+				</div>
+				<div class="video-list">
+					<div class="nextpage clear">
+						<h3>
+							<span>军报每天读</span>
+						</h3>
+					</div>
+					<div class="box-small">
+						<div class="box-video" id="video-box">
+							<ul class="video-ul box-video-opt clear" id="video-list">
+								<!-- 军报天天读列表 -->
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 军报广告 -->
+			<!-- <div class="jfjb-adv"></div> -->
+			<!-- 军报每天读-主持人介绍 -->
+			<!-- <div class="video-host">
+				<div class="host-title">
+					<h3></h3>
+				</div>
+				<ul class="clear">
+					<li class="left-add">
+						<dl>
+							<dt><img src="images/people-04.jpg"></dt>
+							<dd>
+								<p>贺嘉庆，山西石楼人，毕业于重庆大学广播电视新闻学专业。中尉军衔，成都军区某团副指导员。曾获“富春杯”全国大学生演讲大赛优秀奖，被评为该校“优秀国防生”、“优秀毕业生”。2013年，获成都军区“四会”优秀政治教员评比竞赛一等奖，被总政表彰为全军“四会”优秀政治教员，荣立三等功一次。2014年10月，获解放军报“军报每天读”主持人大赛三等奖，现为《军报每天读》栏目主持人。</p>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><img src="images/people-05.jpg"></dt>
+							<dd>
+								<p>夏青，安徽铜陵人，毕业于安徽广播学院播音主持专业。下士军衔，安徽省军区文工团主持人。被评为“优秀士兵”一次，获嘉奖两次；曾获“2010世界小姐选美大赛”上海赛区十强；“全国航模天使模特选拔赛”安徽赛区亚军；铜陵首届“丽人大赛”最佳上镜奖；“砀山梨花仙子”主持人大赛亚军；2014年10月，获解放军报“军报每天读”主持人大赛三等奖，现为《军报每天读》栏目主持人。</p>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><img src="images/people-01.jpg"></dt>
+							<dd>
+								<p>王方，河南安阳人，毕业于洛阳师范学院。2011年9月，获济南军区第七次国防动员委员会“富国与强军”演讲活动一等奖；2012年4月，获全国“中华颂·经典诵读”朗诵比赛大学生组一等奖；2013年9月，获济南军区“信仰的力量”巡回演讲一等奖；2013年12月；2014年6月，获河南省“国防情 强军梦”巡回演讲一等奖；2014年10月，获解放军报“军报每天读”主持人大赛一等奖，现为《军报每天读》栏目主持人。</p>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><img src="images/people-02.jpg"></dt>
+							<dd>
+								<p>王景，北京人，本科毕业于中国传媒大学播音与主持艺术专业，解放军艺术学院文学系文学硕士。曾担任江苏卫视《气象女生》栏目女主播，并被评为“北京城市形象代言人”。参加“第六届军校大学生电视演讲大赛”，“第八届军校大学生电视演讲大赛”，名列前茅，荣立三等功。曾被评为总参军训部优秀“四会政治教员”。2014年10月，获解放军报“军报每天读”主持人大赛二等奖，现为《军报每天读》栏目主持人。</p>
+							</dd>
+						</dl>
+					</li>
+					<li class="right-clear">
+						<dl>
+							<dt><img src="images/people-03.jpg"></dt>
+							<dd>
+								<p>赵宗宁，吉林白山人，毕业于装甲兵工程学院，坦克兵指挥专业。中尉军衔，总装备部某基地排长。2011年和2012年两次获北京市大学生人文知识竞赛二等奖；2012年获学院军事理论辩论赛三等奖；2011年至2013年在学院广播站担任主播，在多次大型活动中担任主播或主持。曾获得装甲兵工程学院毕业学员金质奖章，荣立三等功。2014年10月，获解放军报“军报每天读”主持人大赛二等奖，现为《军报每天读》栏目主持人。</p>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+			</div> -->
+			<div class="jfjb-ppt"></div>
+		</div>
+		<!-- 军报大屏 军报每天读结束 -->
+
+		<!-- 军报大屏 微博开始 -->
+		<div class="jfjb-box" id="jfjb-weibo" ng-app="weiboApp">
+			<!-- 微博左边列表 -->
+			<div class="weibo-left">
+				<!-- 微博左边军报记者头部 -->
+				<dl class="weibo-reporter">
+					<dt><img src="images/weibo_jfjb.png"></dt>
+					<dd>
+						<div class="weibo-data clear" id="weibo-total">
+							<!-- 微博粉丝和文章总数 -->
+						</div>
+					</dd>
+				</dl>
+				<!-- 微博左边最火列表 -->
+				<div class="weibo-hot">
+					<!-- 最火微博动态列表 -->
+				</div>
+			</div>
+			<!-- 微博右边内容列表 -->
+			<div class="weibo-right" id="weibo-box">
+				<div class="weibo-box weibo-opt">
+					<div class="weibo-list" id="weibo-list">
+						<!-- 微博列表 -->
+					</div>
+				</div>
+			</div>
+			<!-- 军报微博 弹出框 -->
+			<div class="weibo-popbox weibo-move" id="">
+				<div class="box-nav">
+					<div class=" clear">
+						<!-- 左边箭头 -->
+						<div class="weibo-picbox-click-left clear" id="weibo-picbox-left">
+							<i class="glyphicon glyphicon-menu-left font-arrow"></i><span>上一页</span>
+						</div>
+						<div class="box-close" id="box-close">
+							<button class="btn btn-default dropdown-toggle">点此关闭</button>
+						</div>
+						<!-- 右边箭头 -->
+						<div class="weibo-picbox-click-right clear" id="weibo-picbox-right">
+							<span>下一页</span>
+							<i class="glyphicon glyphicon-menu-right font-arrow"></i>
+						</div>
+					</div>
+				</div>
+				<div class="weibo-picbox">
+					<!-- 中间区域放微博图 -->
+					<div class="weibo-pic">
+						<!-- 加载微博图片 -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 军报大屏 微博结束 -->
+
+		<!-- 军报大屏 微信开始 -->
+		<div class="jfjb-box" id="jfjb-weixin">
+			<!-- 微信左边列表 -->
+			<div class="weixin-left">
+				<!-- 今日微信 -->
+				<div class="weixin-day">
+					<div class="weixin-title">
+						<img src="images/weixin-01.png">
+					</div>
+					<ul class="weixin-list weixin-newday clear" id="weixin-day">
+						<!-- 今日微信列表 -->
+					</ul>
+				</div>
+				<!-- 广告占位 -->
+				<div class="ribbon-01"></div>
+				<!-- 微信换一换 -->
+				<div class="weixin-change">
+					<div class="weixin-turn" id="weixin-change">
+						<span></span>
+						<div class="trun">
+							<i id="trun-i"></i>
+						</div>
+					</div>
+					<ul class="weixin-list weixin-oldday clear" id="weixin-old">
+						<!-- 微信换一换列表 -->
+					</ul>
+				</div>
+			</div>
+			<!-- 微信右边图片 -->
+			<div class="weixin-right">
+				<div class="weixin-box" id="weixin-bigimg">
+					<div class="opt-img" id="opt-img">
+					<!-- 微信大图 -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 军报大屏 微信结束 -->
+		
+		<!-- 军报大屏 选择报纸开始 -->
+		<div class="jfjb-box" id="jfjb-paper">
+			<div class="newspaper">
+				<!-- 军报上面的隔条 -->
+				<div class="jfjb-shelf"></div>
+				<!-- 解放军报报纸选择 -->
+				<div class="jfjb-newspaper">
+					<!-- 今日解放军报纸 -->
+					<div class="newspaper-day">
+						<h3></h3>
+						<div class="newspaper-Scroll clear">
+							<div class="Scroll-click" id="day-menu-left">
+								<i class="glyphicon glyphicon-menu-left font-big"></i>
+							</div>
+							<div id="jfjb-daynewspaper">
+								<div class="swiper-container" id="swiper-day">
+									<div class="swiper-wrapper">
+										<!-- 今日报纸 -->
+									</div>
+								</div>
+							</div>
+							<div class="Scroll-click" id="day-menu-right">
+								<i class="glyphicon glyphicon-menu-right font-big"></i>
+							</div>
+						</div>
+						<!-- 解放军报书架 -->
+						<div class="book-shelf"></div>
+					</div>
+					<!-- 往日解放军报纸 -->
+					<div class="newspaper-old">
+						<h3></h3>
+						<div class="newspaper-Scroll">
+							<div class="Scroll-click" id="all-menu-left">
+								<i class="glyphicon glyphicon-menu-left font-big"></i>
+							</div>
+							<div id="jfjb-oldnewspaper">
+								<!-- 所有报纸列表 -->
+							</div>
+							<div class="Scroll-click" id="all-menu-right">
+								<i class="glyphicon glyphicon-menu-right font-big"></i>
+							</div>
+						</div>
+						<!-- 解放军报书架 -->
+						<div class="book-shelf"></div>
+					</div>
+				</div>
+				<!-- 军报下面的隔条 -->
+				<div class="jfjb-shelf"></div>
+			</div>
+		</div>
+		<!-- 军报大屏 选择报纸结束 -->
+
+		<!-- 军报大屏 阅读报纸开始 -->
+		<div class="jfjb-box jfjb-height" id="jfjb-readnewspaper">
+			<div class="newspaper">
+				<!-- 军报报纸选择 -->
+				<div class="newspaper-choose clear">
+					<div class="layout-choose clear">
+						<h3></h3>
+						<div class="pagination" id="pagination"> 
+							<!-- 加载分页器 -->
+						</div>
+					</div>
+					<div class="date-choose clear">
+						<h3></h3>
+						<div class="selectionbox">
+							<div class="dropdown clearfix" id="chapter">
+						      	<button class="btn btn-default dropdown-toggle newspaper-btn" type="button" data-toggle="dropdown">
+						        	<span class="date-span"></span>
+						        	<i class="caret caretbig"></i>
+						      	</button>
+						      	<ul class="dropdown-menu date-menu" id="pages_date">
+						        	<!-- 选择刊号列表 -->
+						      	</ul>
+						    </div>
+						</div>
+					</div>
+				</div>
+				<!-- 军报报纸放大 -->
+				<div class="newspaper-read">
+					<!-- 所有报纸列版面 -->
+				</div>
+			</div>
+		</div>
+		<!-- 军报大屏 发布概况开始 -->
+		<div class="jfjb-box" id="jfjb-overview">
+			<div class="newspaper">
+				<!-- 发布概况上面的隔条 -->
+				<div class="jfjb-shelf"></div>
+				<!-- 发布概况图 -->
+				<div class="jfjb-newspaper jfjb-glance" id="overview-img">
+					<!-- 发布概况图 -->
+				</div>
+				<!-- <div class="">
+					<iframe src="http://weibo.com/jfjb?c=spr_qdhz_bd_baidusmt_weibo_s&nick=%E5%86%9B%E6%8A%A5%E8%AE%B0%E8%80%85" frameBorder="0" width="1080" height="1250"></iframe>
+				</div> -->
+				<!-- <div class="jfjb-weibo-ppt clear"></div> -->
+				<!-- 发布概况上面的隔条 -->
+				<div class="jfjb-shelf"></div>
+			</div>
+		</div>
+		<!-- 军报大屏 发布概况结束 -->
+		<!-- 底部 -->
+		<div class="jfjb-media jfjb-media-height clear" id="jfjb-readfooter">
+			<div class="media-center">
+				<dl>
+					<dt>
+						<img src="images/media-01.jpg">
+					</dt>
+					<dd>
+						<h3>苹果客户端</h3>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<img src="images/media-02.jpg">
+					</dt>
+					<dd>
+						<h3>安卓客户端</h3>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<img src="images/media-03.jpg">
+					</dt>
+					<dd>
+						<h3>军报微信</h3>
+					</dd>
+				</dl>
+				<dl class="right-clear">
+					<dt>
+						<img src="images/media-04.jpg">
+					</dt>
+					<dd>
+						<h3>军报微博</h3>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<!-- 军报大屏 阅读报纸结束 -->
+
+		<!-- 底部 开始-->
+		<div class="footer" id="jfjb-footer">
+			<!-- 广告平台 -->
+			<div class="advertise">
+				<div class="jfjb-outer">
+			        <div class="jfjb-inner">
+			            <img src="images/nav-01.jpg">
+			        </div>
+			   	</div>
+			</div>
+			<!-- 军报媒体 -->
+			<div class="jfjb-media clear">
+				<div class="media-center">
+					<dl>
+						<dt>
+							<img src="images/media-01.jpg">
+						</dt>
+						<dd>
+							<h3>苹果客户端</h3>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<img src="images/media-02.jpg">
+						</dt>
+						<dd>
+							<h3>安卓客户端</h3>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<img src="images/media-03.jpg">
+						</dt>
+						<dd>
+							<h3>军报微信</h3>
+						</dd>
+					</dl>
+					<dl class="right-clear">
+						<dt>
+							<img src="images/media-04.jpg">
+						</dt>
+						<dd>
+							<h3>军报微博</h3>
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<!-- 底部 结束-->
+	</div>
+<script src="js/main.js"></script>
+</body>
+</html>

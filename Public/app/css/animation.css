@@ -1,0 +1,137 @@
+
+/*============================微信换一换动画=========================*/
+.musicPlay{
+	-webkit-animation: reverserotataz 1s ease-in-out;
+	-moz-animation: reverserotataz 1s ease-in-out;
+	-ms-animation: reverserotataz 1s ease-in-out;
+	-o-animation: reverserotataz 1s ease-in-out;
+	animation: reverserotataz 1s ease-in-out;
+	/*-webkit-animation: reverserotataz 2s linear infinite;*/
+    -webkit-transform-origin:50% 50%;
+    -moz-transform-origin:50% 50%;
+    -ms-transform-origin:50% 50%;
+    -o-transform-origin:50% 50%;
+    transform-origin:50% 50%;
+}
+@-webkit-keyframes reverserotataz {
+    0% {
+        -webkit-transform: rotateZ(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotateZ(360deg);
+    }
+}
+@-moz-keyframes reverserotataz{ 
+	0%{ 
+		-moz-transform : rotateZ(0deg); 
+	} 
+	100%{ 
+		-moz-transform : rotateZ(360deg); 
+	} 
+} 
+@-ms-keyframes reverserotataz{ 
+	0%{ 
+		-ms-transform : rotateZ(0deg); 
+	} 
+	100%{ 
+		-ms-transform : rotateZ(360deg); 
+	} 
+} 
+@-o-keyframes reverserotataz{ 
+	0%{ 
+		-o-transform : rotateZ(0deg); 
+	} 
+	100%{ 
+		-o-transform : rotateZ(360deg); 
+	} 
+} 
+@keyframes reverserotataz{ 
+	0%{ 
+		transform : rotateZ(0deg); 
+	} 
+	100%{ 
+		transform : rotateZ(360deg); 
+	} 
+} 
+#weixin-old {
+	width: 366px;
+	height: 562px;
+	position: relative;
+}
+.weixin-move:nth-child(2){
+	position: absolute;
+	top:87px;
+}
+.weixin-move:nth-child(3){
+	position: absolute;
+	top:156px;
+}
+.weixin-move:nth-child(4){
+	position: absolute;
+	top:225px;
+}
+.weixin-move:nth-child(5){
+	position: absolute;
+	top:294px;
+}
+.weixin-move:nth-child(6){
+	position: absolute;
+	top:363px;
+}
+.weixin-move:nth-child(7){
+	position: absolute;
+	top:432px;
+}
+.weixin-move:nth-child(8){
+	position: absolute;
+	top:501px;
+}
+.weixin-move{
+	-webkit-animation: weixinmove 1s ease-in-out;
+	-moz-animation: weixinmove 1s ease-in-out;
+	-ms-animation: weixinmove 1s ease-in-out;
+	-o-animation: weixinmove 1s ease-in-out;
+	animation: weixinmove 1s ease-in-out;
+	position:absolute;
+}
+@-webkit-keyframes weixinmove {
+    0% {
+        clip: rect(0px, 0px, 50px, 0px);
+    }
+    100% {
+        clip: rect(0px, 366px, 50px, 0px);
+    }
+}
+@-moz-keyframes weixinmove{ 
+    0% {
+        clip: rect(0px, 0px, 50px, 0px);
+    }
+    100% {
+        clip: rect(0px, 366px, 50px, 0px);
+    }
+} 
+@-ms-keyframes weixinmove{ 
+    0% {
+        clip: rect(0px, 0px, 50px, 0px);
+    }
+    100% {
+        clip: rect(0px, 366px, 50px, 0px);
+    } 
+} 
+@-o-keyframes weixinmove{ 
+    0% {
+        clip: rect(0px, 0px, 50px, 0px);
+    }
+    100% {
+        clip: rect(0px, 366px, 50px, 0px);
+    }
+} 
+@keyframes weixinmove{ 
+    0% {
+        clip: rect(0px, 0px, 50px, 0px);
+    }
+    100% {
+        clip: rect(0px, 366px, 50px, 0px);
+    }
+}
