@@ -1,0 +1,1 @@
+d:\xampp\htdocs\jfjb\exe\sleep.exe /enable
