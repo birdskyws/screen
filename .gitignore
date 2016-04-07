@@ -3,3 +3,4 @@
 /Application/Runtime
 /Public/cache
 /ThinkPHP
+/.gitignore
